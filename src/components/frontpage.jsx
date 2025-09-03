@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import Rotatingshoes from './Rotatingshoes';
 const Frontpage = () => {
   const [show, setShow] = useState(false);
 
@@ -9,24 +9,29 @@ const Frontpage = () => {
   }, []);
 
   return (
-    <div className="relative h-72 overflow-hidden bg-white">
+    <div className='h-screen bg-indigo-900'>   
+     <div className="relative h-100 overflow ">
       {/* Shoe image */}
       <img 
         className={`
-          absolute left-150 bottom-0 w-84 h-84 z-0 rotate-5 transform -translate-x-1/2 transition-all duration-1000 ease-out
-          ${show ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
+          absolute left-140 top-2 rotate-270 w-104 h-104 z-0 transform transition-all duration-1000 ease-out
+          ${show ? 'translate-y-0 opacity-100' : 'translate-x-200 opacity-0'}
         `}
-        src="src/components/images/openingshoe.png" 
+        src="src/components/images/openingshoe3.png" 
         alt="loading..." 
       />
 
       {/* Text */}
-      <p className="
-        relative z-10 text-black text-9xl font-bold text-center pt-40 bottom-10
-      ">
-        <i>Stylish <span className="text-blue-500">footwear</span></i>
+      <p className={` relative z-1 text-black w-300  text-8xl left-30 font-bold text-center pt-40 top-1 transition-all duration-1000 ease-out
+        ${show ? 'translate-x-0 opacity-100' : 'translate-x-200 opacity-0'}
+      "`}
+       >
+        <i><span className='text-white'>Where</span> Performance  <span className="text-white">Meets</span> Style.</i>
       </p>
     </div>
+    <Rotatingshoes />
+    </div>
+
   );
 };
 
