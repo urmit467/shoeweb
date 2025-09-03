@@ -1,13 +1,20 @@
 import React from 'react';
 
-export default function App() {
+// 1. Import the images from their relative path
+import image1 from './images/image1.jpg';
+import image2 from './images/image2.jpg';
+import image3 from './images/image3.jpg';
+import image4 from './images/image4.jpg';
+import image5 from './images/image5.jpg';
+
+export default function Rotatingshoes() {
+  // 2. Use the imported variables in your array
   const images = [
-    "https://images.unsplash.com/photo-1542291026-7eec264c27ab?q=80&auto=format&fit=crop&w=500",
-    "https://images.unsplash.com/photo-1595950654149-a0294a6ba108?q=80&auto=format&fit=crop&w=500",
-    "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?q=80&auto=format&fit=crop&w=500",
-    "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&auto=format&fit=crop&w=500",
-    "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&auto=format&fit=crop&w=500",
-    "https://images.unsplash.com/photo-1605348532760-6753d2c43329?q=80&auto=format&fit=crop&w=500",
+    image5,
+    image4,
+    image3,
+    image2,
+    image1,
   ];
 
   return (
@@ -21,7 +28,7 @@ export default function App() {
         </p>
       </div>
 
-      <div className="group w-full w-full overflow-hidden bg-indigi-900 py-8 ">
+      <div className="group w-full overflow-hidden bg-indigi-900 py-8 ">
         <div
           className="flex space-x-12 group-hover:[animation-play-state:paused]"
           style={{
@@ -32,12 +39,12 @@ export default function App() {
           {[...images, ...images].map((src, i) => (
             <div key={i} className="flex-shrink-0 w-80 h-56 relative rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                 <img
-                    src={src}
+                    src={src} // This now correctly points to the processed image path
                     alt={`Shoe image ${i + 1}`}
                     className="w-full h-full object-cover"
                     onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/320x224/000000/FFFFFF?text=Image+Not+Found'; }}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute inset-0  bg-opacity-20"></div>
             </div>
           ))}
         </div>
@@ -54,4 +61,3 @@ export default function App() {
     </div>
   );
 }
-

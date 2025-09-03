@@ -9,7 +9,7 @@ const Frontpage = () => {
   }, []);
 
   return (
-    <div className='h-screen bg-indigo-900'>   
+    <div className='h-screen max-w-full bg-indigo-900'>   
      <div className="relative h-100 overflow ">
       {/* Shoe image */}
       <img 
