@@ -7,11 +7,36 @@ import shoe5 from "./images/shopping1.webp";
 
 // Shoes array
 const shoes = [
-  { name: "Nike Streakfly 2", price: "₹16,995", img: shoe1 },
-  { name: "Nike Air Zoom", price: "₹12,495", img: shoe2 },
-  { name: "Nike Pegasus", price: "₹10,995", img: shoe3 },
-  { name: "Nike Vaporfly", price: "₹18,495", img: shoe4 },
-  { name: "Nike Alphafly", price: "₹19,995", img: shoe5 },
+  {
+    name: "Nike Streakfly 2",
+    price: "₹16,995",
+    img: shoe1,
+    link: "https://www.nike.com/in/t/streakfly-2-road-racing-shoes-gL3BZf/HF6416-400",
+  },
+  {
+    name: "Nike Air Zoom",
+    price: "₹12,495",
+    img: shoe2,
+    link: "https://www.nike.com/in/t/air-zoom-upturn-sc-shoes-x34xfn",
+  },
+  {
+    name: "Nike Pegasus",
+    price: "₹10,995",
+    img: shoe3,
+    link: "https://www.nike.com/in/t/pegasus-41-road-running-shoes-RZm89S/FD2722-015",
+  },
+  {
+    name: "Nike Vaporfly",
+    price: "₹18,495",
+    img: shoe4,
+    link: "https://www.nike.com/in/t/vaporfly-4-road-racing-shoes-PTwDtp/HF6414-100",
+  },
+  {
+    name: "Nike Alphafly",
+    price: "₹19,995",
+    img: shoe5,
+    link: "https://www.nike.com/in/t/alphafly-3-road-racing-shoes-d6x9mh/FD8311-101",
+  },
 ];
 
 const Nike1 = () => {
@@ -19,9 +44,12 @@ const Nike1 = () => {
     <div className="w-full overflow-hidden bg-gradient-to-b from-green-900 via-black to-green-900 py-10">
       <div className="marquee">
         {[...shoes, ...shoes].map((shoe, index) => (
-          <div
+          <a
             key={index}
-            className="flex flex-col items-center min-w-[200px] bg-white rounded-xl shadow-lg p-4 mx-4"
+            href={shoe.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center min-w-[200px] bg-[#CFCFCF] rounded-xl shadow-lg p-4 mx-4 hover:scale-105 transition-transform duration-300"
           >
             <img
               src={shoe.img}
@@ -30,7 +58,7 @@ const Nike1 = () => {
             />
             <h3 className="text-lg font-bold text-gray-900">{shoe.name}</h3>
             <p className="text-gray-600">{shoe.price}</p>
-          </div>
+          </a>
         ))}
       </div>
 

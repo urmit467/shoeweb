@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Nike1 from './Nike1';
 import { motion } from "framer-motion";
+import List from "./List";
 const Frontpage = () => {
   const [show, setShow] = useState(false);
 
@@ -36,21 +37,26 @@ const Frontpage = () => {
        >
       <i>Meets Style</i>
       </p>
+
       <motion.h1
       initial={{ opacity: 0, y: 0 }} // start invisible, moved down 
       whileInView={{ opacity: 1, y: 0 }} // fade in + slide up 
       transition={{ duration: 2, ease: "easeOut" }} 
       viewport={{ once: true, amount: 1.0}} // trigger when 50% visible 
-      className="relative text-[#1E0C36] w-150 left-130 text-6xl font-bold text-center top-4 font-poppins z-1"
+      className="relative text-[#1E0C36] w-150 left-125 text-6xl font-bold text-center top-4 font-poppins z-1"
       >
-
          Our Top Picks
       </motion.h1>
 
     </div>
     <div className={`relative top-10 h-100 w-full bg-green-900 `}><Nike1 /></div>
-    
+        <div className='relative h-900 w-full bg-gradient-to-b from-green-900 via-black to-green-900 '>
+        <p className='relative top-18 text-6xl text-center'>New collections</p>
+        <div className='relative top-10'> <List/></div>
+       
     </div>
+    </div>
+
 
   );
 };
