@@ -8,7 +8,7 @@ function App() {
 
   return (
  <>
-  <nav className="p-4 bg-indigo-900 flex gap-4 text-white justify-center">
+  <nav className="p-4 bg-green-900 flex gap-4 text-white justify-center">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/products">Products</Link>
