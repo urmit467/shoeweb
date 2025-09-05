@@ -228,7 +228,7 @@ const List = () => {
   initial="hidden"
   animate="visible"
   transition={{ duration: 0.3, delay: index * 0.06 }}
-  viewport={{ once: true, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.1 }}
   className="border-2 m-5 p-5 bg-[#EBEBEB] rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 
              w-[280px] h-[420px] flex flex-col justify-between" // 🔹 fixed size + flex layout
 >
