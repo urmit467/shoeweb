@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import List from "./List";
 import Shoe1 from "./Shoe1";
-import ShoeSlide from "./Shoeslide";
+
 const Frontpage = () => {
   const [show, setShow] = useState(false);
   const first = useRef(2);
@@ -28,7 +28,7 @@ const Frontpage = () => {
 
         {/* Text */}
         <p
-          className={` relative z-1 text-black w-150 left-27  text-8xl hover:text-red-700 font-bold text-center pt-40 bottom-25 transition-all duration-1000 ease-out
+          className={` relative z-1 text-black w-150 left-27  text-8xl hover:bg-gradient-to-b hover:from-black via-black hover:to-white hover:bg-clip-text hover:text-transparent transition duration-500 font-bold text-center pt-40 bottom-25 transition-all duration-1000 ease-out
         ${show ? "translate-x-0 opacity-100" : "translate-x-200 opacity-0"}
       "`}
         >
@@ -57,9 +57,7 @@ const Frontpage = () => {
         
       </div>
 
-            <div className="relative h-screen w-full bg-black">
-      <ShoeSlide />
-            </div>
+
 
       <div className="relative h-900 w-full bg-gradient-to-b from-green-900 via-black to-green-900 ">
         <p className="relative top-18 text-6xl text-center">New collections</p>
