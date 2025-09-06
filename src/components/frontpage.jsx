@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import List from "./List";
-
+import Shoe1 from "./Shoe1";
+import ShoeSlide from "./Shoeslide";
 const Frontpage = () => {
   const [show, setShow] = useState(false);
   const first = useRef(2);
@@ -50,10 +51,19 @@ const Frontpage = () => {
       </div>
 
 
+      {/* shoe display */}
+      <div className="relative h-180  w-full bg-black">
+        <div className="relative"><Shoe1 /></div>
+        
+      </div>
+
+            <div className="relative h-screen w-full bg-black">
+      <ShoeSlide />
+            </div>
+
       <div className="relative h-900 w-full bg-gradient-to-b from-green-900 via-black to-green-900 ">
         <p className="relative top-18 text-6xl text-center">New collections</p>
         <div className="relative top-10">
-    
           <List />
         </div>
       </div>

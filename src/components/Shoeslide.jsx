@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import shoe1 from "./images/shoe1.png";
-import shoe2 from "./images/shoe2.png";
-import shoe3 from "./images/shoe3.png";
-import shoe4 from "./images/shoe4.png";
-import shoe5 from "./images/shoe5.png";
+import shoe2 from "./images/basketball.png";
+// import shoe3 from "./images/shoe3.png";
+// import shoe4 from "./images/shoe4.png";
+// import shoe5 from "./images/shoe5.png";
 
 const shoes = [
   { img: shoe1, bg: "bg-[#f89d13]" },
   { img: shoe2, bg: "bg-[#aed2d6]" },
-  { img: shoe3, bg: "bg-[#ee0302]" },
-  { img: shoe4, bg: "bg-[#000000]" },
-  { img: shoe5, bg: "bg-[#18c971]" },
+
 ];
 
 const ShoeSlide = () => {
