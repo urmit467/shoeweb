@@ -60,7 +60,7 @@ const Frontpage = () => {
     
 
 
-      <div className="relative h-900 w-full bg-gradient-to-b from-green-900 via-black to-green-900 ">
+      <div className="relative h-900 w-full bg-white">
         <p className="relative top-18 text-6xl text-center">New collections</p>
         <div className="relative top-10">
           <List />
