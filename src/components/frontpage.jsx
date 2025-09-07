@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import List from "./List";
 import Shoe1 from "./Shoe1";
-
+import Cursorfollow from "./Cursorfollow";
 const Frontpage = () => {
   const [show, setShow] = useState(false);
   const first = useRef(2);
@@ -15,6 +15,7 @@ const Frontpage = () => {
 
   return (
     <div className="h-screen max-w-full bg-green-900 ">
+           <Cursorfollow />
       <div className="relative bg-gradient-to-b from-green-900 via-[#8BE627] to-green-900 w-full h-180  top-10 overflow ">
         {/* Shoe image */}
         <img
@@ -52,11 +53,11 @@ const Frontpage = () => {
 
 
       {/* shoe display */}
-      <div className="relative h-180  w-full bg-black">
+      <div className="relative h-185  w-full bg-black">
         <div className="relative"><Shoe1 /></div>
         
       </div>
-
+    
 
 
       <div className="relative h-900 w-full bg-gradient-to-b from-green-900 via-black to-green-900 ">

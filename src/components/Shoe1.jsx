@@ -7,12 +7,12 @@ import shoe4 from "./images/shoe4-photoroom.png";
 import shoe5 from "./images/shoe5-photoroom.png";
 const shoeimg = [shoe1, shoe2, shoe3, shoe4, shoe5];
 const coloring = [
-  "#223440",
-  "#004938ff",
-  "#aea286ff",
-  "#e28f55",
-  "#717477ff",
-  "#a90e2b",
+  "#446a84ff",
+  "#008566ff",
+  "#ac5192ff",
+  "#036d9aff",
+  "#9fa2a6ff",
+  "#df153aff",
 ];
 import { useEffect, useState } from "react";
 import { i } from "framer-motion/client";
@@ -29,47 +29,52 @@ const Shoe1 = () => {
 
   return (
     <>
-      <div className="flex h-180 w-full bg-black">
+      <div className="flex h-185 w-full bg-black">
         <motion.div
-          className="h-180 w-1/5 bg-[#EDEDED]"
+          className="h-185 w-1/5 bg-[#EDEDED]"
           initial={{ x: -300, opacity: 0.2 }}
           whileInView={{ x: 0, opacity: 0.9 }}
+          viewport={{once:true}}
           transition={{ duration: 1, delay: 0.2, type: "spring" }}
         ></motion.div>
         <motion.div
-          className="h-180 w-1/5"
+          className="h-185 w-1/5"
           style={{ backgroundColor: coloring[index] }}
           initial={{ x: -600, opacity: 0.2 }}
           whileInView={{ x: 0, opacity: 0.9 }}
+            viewport={{once:true}}
           transition={{ duration: 1.0, delay: 0.3, type: "spring" }}
         ></motion.div>
         <motion.div
-          className=" h-180 w-1/5 bg-[#EDEDED]"
+          className=" h-185 w-1/5 bg-[#EDEDED]"
           initial={{ x: -900, opacity: 0.2 }}
           whileInView={{ x: 0, opacity: 0.9 }}
+            viewport={{once:true}}
           transition={{ duration: 1.0, delay: 0.4, type: "spring" }}
         ></motion.div>
         <motion.div
-          className="h-180 w-1/5"
+          className="h-185 w-1/5"
           style={{ backgroundColor: coloring[index] }}
           initial={{ x: -1200, opacity: 0.2 }}
           whileInView={{ x: 0, opacity: 0.9 }}
+            viewport={{once:true}}
           transition={{ duration: 1, delay: 0.5, type: "spring" }}
         ></motion.div>
         <motion.div
-          className=" h-180 w-1/5 bg-[#EDEDED]"
+          className=" h-185 w-1/5 bg-[#EDEDED]"
           initial={{ x: -1500, opacity: 0.2 }}
           whileInView={{ x: 0, opacity: 0.9 }}
+            viewport={{once:true}}
           transition={{ duration: 1, delay: 0.6, type: "spring" }}
         ></motion.div>
-        <div className="absolute left-127 top-20 h-130 w-130 bg-transparent">
+        <div className="absolute flex items-center justify-center left-127 top-20 h-130 w-130 bg-transparent">
           <motion.img
-            className="relative   drop-shadow-[0_40px_60px_rgba(0,0,0,1.0)]"
+            className="relativeax-w-full max-h-full object-contain drop-shadow-[0_40px_60px_rgba(0,0,0,1.0)]"
             src={shoeimg[index]}
             alt=""
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.25 }}
+            transition={{ duration: 1, delay: 1.25 }}
           />
         </div>
         ;
