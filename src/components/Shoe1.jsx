@@ -8,11 +8,11 @@ import shoe6 from "./images/shoe6-photoroom.png";
 import logo from "./images/Logo_NIKE.svg.png";
 const shoeimg = [shoe1, shoe2, shoe3, shoe4,shoe6];
 const coloring = [
-  "#446a84ff",
-  "#008566ff",
-  "#ac5192ff",
-  "#036d9aff",
-  "#df153aff",
+  "#619ac0ff",
+  "#00c597ff",
+  "#a53dd4ff",
+  "#0384bcff",
+  "#e23aa2ff",
 ];
 import { useEffect, useState } from "react";
 const shoeText = [
