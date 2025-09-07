@@ -53,8 +53,8 @@ const Frontpage = () => {
 
 
       {/* shoe display */}
-      <div className="relative h-185  w-full bg-black">
-        <div className="relative"><Shoe1 /></div>
+      <div className="relative h-185  w-full bg-white z-0">
+        <div className="relative z-10"><Shoe1 /></div>
         
       </div>
     
