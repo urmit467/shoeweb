@@ -25,6 +25,7 @@ const shoes = [
       "A responsive everyday running shoe with Zoom Air cushioning for comfort and speed.",
     rating: 4.6,
     link: "/shoe1",
+    bgColor: "#b1e4eaff", // light cyan
   },
   {
     name: "Nike ZoomX Vaporfly Next% 3",
@@ -34,6 +35,7 @@ const shoes = [
       "Engineered for marathon runners, lightweight design with ZoomX foam for maximum energy return.",
     rating: 4.8,
     link: "/shoe2",
+    bgColor: "#848484ff", // light orange
   },
   {
     name: "Nike Air Force 1 '07",
@@ -43,6 +45,7 @@ const shoes = [
       "Classic basketball-inspired lifestyle sneaker with leather construction and timeless style.",
     rating: 4.7,
     link: "/shoe3",
+    bgColor: "#abafffff", // light green
   },
   {
     name: "Nike Dunk Low Retro",
@@ -52,6 +55,7 @@ const shoes = [
       "Iconic Dunk design with premium materials for streetwear and casual everyday style.",
     rating: 4.5,
     link: "/shoe4",
+    bgColor: "#fff494ff", // light purple
   },
   {
     name: "Nike Metcon 9",
@@ -61,6 +65,7 @@ const shoes = [
       "Durable training shoe designed for weightlifting, HIIT, and cross-training stability.",
     rating: 4.4,
     link: "/shoe5",
+    bgColor: "#a0a0a0ff", // light pink
   },
   {
     name: "Nike InfinityRN 4",
@@ -70,6 +75,7 @@ const shoes = [
       "Soft cushioning and Flyknit upper for a supportive, everyday long-distance run.",
     rating: 4.6,
     link: "/shoe6",
+    bgColor: "#E3F2FD", // light blue
   },
   {
     name: "Nike Blazer Mid '77 Vintage",
@@ -79,6 +85,7 @@ const shoes = [
       "Retro-inspired basketball sneaker with suede overlays and vintage mid-cut silhouette.",
     rating: 4.5,
     link: "/shoe7",
+    bgColor: "#86a9eeff", // light yellow
   },
   {
     name: "Nike React Infinity Run Flyknit 3",
@@ -88,6 +95,7 @@ const shoes = [
       "Built to reduce running injuries, offers soft cushioning and a natural forward feel.",
     rating: 4.7,
     link: "/shoe8",
+    bgColor: "#F1F8E9", // lime green
   },
   {
     name: "Nike LeBron 21",
@@ -97,6 +105,7 @@ const shoes = [
       "Basketball shoe designed with premium cushioning for explosive moves and impact protection.",
     rating: 4.9,
     link: "/shoe9",
+    bgColor: "#e8e4fcff", // light rose
   },
   {
     name: "Nike Phantom GX 2 Elite FG",
@@ -106,6 +115,7 @@ const shoes = [
       "Elite-level football boots with Gripknit technology for precision touch and agility.",
     rating: 4.8,
     link: "/shoe10",
+    bgColor: "#95acffff", // light lavender
   },
 ];
 
@@ -123,33 +133,34 @@ const List = () => {
           <div ref={ref} key={index}>
             {isInView && (
               <motion.div
+              
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 0.3, delay: index * 0.06 }}
                 viewport={{ once: true, amount: 0.1 }}
-                className="border-2 m-5 p-5 bg-[#EBEBEB] rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 
-             w-[280px] h-[420px] flex flex-col justify-between" // 🔹 fixed size + flex layout
+                className=" m-5  bg-[#EBEBEB] rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 h-100
+             w-70 flex flex-col justify-between" 
               >
                 <a
                   className="hover:cursor-pointer h-full flex flex-col"
                   href={shoe.link}
                 >
                   {/* 🔹 Fixed image box */}
-                  <div className="relative w-full h-[180px] flex items-center justify-center overflow-hidden rounded-lg">
+                  <div className="relative w-full h-[180px] flex items-center justify-center rounded-lg">
                     {/* Black background layer */}
-                    <div className="absolute inset-0 bg-black z-0"></div>
+                  <div style={{backgroundColor: shoe.bgColor}} className="absolute w-full  inset-0  z-0"></div>
 
                     {/* Shoe image */}
                     <img
-                      className="relative max-h-[160px] object-contain z-10 rotate-[340deg]"
+                    className="relative max-h-[400px] w-full bottom-3 right-3 object-contain z-10 rotate-[330deg]"
                       src={shoe.img}
                       alt={shoe.name}
                     />
                   </div>
 
                   {/* 🔹 Content */}
-                  <div className="flex flex-col flex-grow mt-4 text-center">
+                  <div className="flex flex-col bg-white flex-grow mt-4 text-center p-5">
                     <h2 className="text-lg font-bold line-clamp-1">
                       {shoe.name}
                     </h2>

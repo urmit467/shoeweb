@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import List from "./List";
 import Shoe1 from "./Shoe1";
 import Cursorfollow from "./Cursorfollow";
+import Listop from "./Listop";
 const Frontpage = () => {
   const [show, setShow] = useState(false);
   const first = useRef(2);
@@ -60,11 +61,14 @@ const Frontpage = () => {
     
 
 
-      <div className="relative h-900 w-full bg-white">
-        <p className="relative top-18 text-6xl text-center">New collections</p>
-        <div className="relative top-10">
+      <div className="relative h-600 w-full bg-white">
+        <Listop scrollTarget="contact"/>
+        <section id="contact">
+                  <div className="relative top-10">
           <List />
         </div>
+        </section>
+
       </div>
     </div>
   );
