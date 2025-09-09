@@ -10,7 +10,7 @@ function App() {
  <>
 
     <Routes>
-      <Route path="/" element={<Page />} />
+      <Route path="/shoeweb" element={<Page />} />
     </Routes>
   
  </>
