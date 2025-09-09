@@ -105,7 +105,7 @@ const shoes = [
       "Basketball shoe designed with premium cushioning for explosive moves and impact protection.",
     rating: 4.9,
     link: "/shoe9",
-    bgColor: "#e8e4fcff", // light rose
+    bgColor: "#bd8dffff", // light rose
   },
   {
     name: "Nike Phantom GX 2 Elite FG",
