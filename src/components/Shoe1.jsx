@@ -38,6 +38,7 @@ const shoeText2 = [
 ];
 
 const Shoe1 = () => {
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
