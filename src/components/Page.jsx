@@ -6,7 +6,7 @@ import Cursorfollow from "./Cursorfollow";
 import Listop from "./Listop";
 import NikeFooter from "./NikeFooter";
 
-const Frontpage = () => {
+const Page = () => {
   const [show, setShow] = useState(false);
   const first = useRef(2);
   const [index, setIndex] = useState(0);
@@ -135,4 +135,4 @@ const Frontpage = () => {
   );
 };
 
-export default Frontpage;
+export default Page;

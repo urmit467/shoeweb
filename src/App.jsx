@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Frontpage from './components/frontpage';
+import Page from './components/Page'
 import './App.css'
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function App() {
  <>
 
     <Routes>
-      <Route path="/" element={<Frontpage />} />
+      <Route path="/" element={<Page />} />
     </Routes>
   
  </>
