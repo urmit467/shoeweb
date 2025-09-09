@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Frontpage from './components/Frontpage'
+import Frontpage from './components/frontpage';
 import './App.css'
 import { Routes, Route, Link } from "react-router-dom";
 
