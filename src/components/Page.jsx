@@ -4,7 +4,8 @@ import List from "./List";
 import Shoe1 from "./Shoe1";
 import Cursorfollow from "./Cursorfollow";
 import Listop from "./Listop";
-import NikeFooter from "./NikeFooter";
+import NikeFooter from "./Footer";
+import opening from "./images/opeingshoe.png";
 
 const Page = () => {
   const [show, setShow] = useState(false);
@@ -47,6 +48,7 @@ const Page = () => {
 
   return (
     <div className="h-screen max-w-full bg-green-900">
+      <Cursorfollow />
       {/* Header / Nav - attach ref so we can measure its height */}
       <section
         ref={headerRef}
@@ -77,7 +79,7 @@ const Page = () => {
         <img
           className={`absolute left-130 bottom-55 rotate-330 w-120 h-144 z-0 transform transition-all duration-1000 ease-out
           ${show ? "translate-y-0 opacity-100" : "translate-y-200 opacity-0"}`}
-          src="src/components/images/opeingshoe.png"
+          src={opening}
           alt="loading..."
         />
 
@@ -113,24 +115,22 @@ const Page = () => {
 
       {/* Products block - add scrollMarginTop so normal anchor jumps respect header */}
       <div
-        id="product"
+        
         className="relative h-600 w-full bg-white"
         style={{ scrollMarginTop: `${headerHeight + 12}px` }}
       >
         <Listop scrollTarget="contact" />
-        <section
-          id="contact"
-          style={{ scrollMarginTop: `${headerHeight + 12}px` }}
-        >
-          <div className="relative top-10">
+        <section style={{ scrollMarginTop: `${headerHeight + 12}px` }}>
+          <div className="relative top-10" id="product">
             <List />
           </div>
         </section>
       </div>
-
-      <div>
-        <NikeFooter />
-      </div>
+      <section id="contact">
+        <div>
+          <NikeFooter />
+        </div>
+      </section>
     </div>
   );
 };
