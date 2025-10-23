@@ -6,8 +6,16 @@ import Cursorfollow from "./Cursorfollow";
 import Listop from "./Listop";
 import NikeFooter from "./Footer";
 import opening from "./images/opeingshoe.png";
+import Main from "./Products/Main";
+import { Link,useNavigate } from "react-router-dom";
 
 const Page = () => {
+  const navigate=useNavigate();
+
+  const handleclickProducts=()=>{
+    navigate('/shoeweb/Products');
+  }
+
   const [show, setShow] = useState(false);
   const first = useRef(2);
   const [index, setIndex] = useState(0);
@@ -52,23 +60,25 @@ const Page = () => {
       {/* Header / Nav - attach ref so we can measure its height */}
       <section
         ref={headerRef}
-        className="p-4 bg-transparent flex gap-4 text-slate-300 justify-center fixed w-full z-50"
+        className="p-4 bg-transparent flex gap-4 text-black justify-center fixed w-full z-50"
       >
-        <button onClick={() => scrollToId("top")} className="cursor-pointer">
+        <button onClick={() => scrollToId("top")} className="cursor-pointer bg-white w-25 rounded-xl ">
           Home
         </button>
-        <button
-          onClick={() => scrollToId("product")}
-          className="cursor-pointer"
-        >
-          Products
-        </button>
+
+        <button className="cursor-pointer bg-white w-25 rounded-xl" onClick={handleclickProducts}>Products</button>
         <button
           onClick={() => scrollToId("contact")}
-          className="cursor-pointer"
+          className="cursor-pointer bg-white w-25 rounded-xl"
         >
           Contact Us
         </button>
+        <div className="absolute right-4 bottom-1">
+          <span className="flex items-center space-x-4">
+            <p className="font-bold">User</p>
+            <button className="rounded-full bg-black h-12 w-12"></button>
+          </span>
+        </div>
       </section>
 
       {/* spacer to account for fixed header */}
@@ -107,15 +117,10 @@ const Page = () => {
       </div>
 
       {/* shoe display */}
-      <div className="relative h-185 w-full bg-white z-0">
-        <div className="relative z-10">
-          <Shoe1 />
-        </div>
-      </div>
+
 
       {/* Products block - add scrollMarginTop so normal anchor jumps respect header */}
       <div
-        
         className="relative h-600 w-full bg-white"
         style={{ scrollMarginTop: `${headerHeight + 12}px` }}
       >
@@ -125,6 +130,11 @@ const Page = () => {
             <List />
           </div>
         </section>
+      </div>
+            <div className="relative h-185 w-full bg-white z-0">
+        <div className="relative z-10">
+          <Shoe1 />
+        </div>
       </div>
       <section id="contact">
         <div>

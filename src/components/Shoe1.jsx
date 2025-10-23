@@ -148,9 +148,9 @@ const Shoe1 = () => {
             transition={{ duration: 1, delay: 1.25 }}
           />
         </div>
-        <div className="absolute left-2 top-5 h-35 w-50 bg-transparent ">
+        {/* <div className="absolute left-2 top-5 h-35 w-50 bg-transparent ">
           <img src={logo} alt="" />
-        </div>
+        </div> */}
       </div>
     </>
   );
