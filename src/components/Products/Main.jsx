@@ -1,10 +1,15 @@
 import React from 'react'
 import Nav from './Nav.jsx'
+import Slide from './Slide.jsx'
 const Main = () => {
   return (
-    <div>
+    <div className='bg-[#CFFFDC] h-350'>
 
-        <div className='h-20 w-full bg-black'><Nav /></div>
+        <div ><Nav /></div>
+        <div className='flex mt-10 '>
+            <Slide />
+
+        </div>
         
     </div>
   )
