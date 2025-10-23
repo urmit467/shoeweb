@@ -79,7 +79,7 @@ const Shoe1 = () => {
           transition={{ duration: 1.0, delay: 0.3, type: "spring" }}
         ></motion.div>
        <motion.div
-          className="h-185 w-1/10 bg-[#EDEDED]z-0"
+          className="h-185 w-1/10 bg-[#EDEDED] z-0"
           initial={{ x: -360, opacity: 0.2 }}
           whileInView={{ x: 0, opacity: 0.9 }}
           viewport={{ once: true }}
